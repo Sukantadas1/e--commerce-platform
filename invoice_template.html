@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        padding: 20px;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      .info {
+        margin-bottom: 20px;
+      }
+      .info div {
+        margin-bottom: 5px;
+      }
+      .addresses {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+      .address {
+        width: 45%;
+      }
+      .items table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      .items table,
+      .items th,
+      .items td {
+        border: 1px solid black;
+      }
+      .items th,
+      .items td {
+        padding: 10px;
+        text-align: left;
+      }
+      .items th {
+        background-color: #f2f2f2;
+      }
+      .summary {
+        float: right;
+      }
+      .summary table {
+        width: 300px;
+        border-collapse: collapse;
+      }
+      .summary th,
+      .summary td {
+        padding: 10px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>INVOICE</h1>
+      </div>
+      <div class="info">
+        <div>Invoice Number: <span id="invoice-number"></span></div>
+        <div>Invoice Date: <span id="invoice-date"></span></div>
+        <div>Due Date: <span id="due-date"></span></div>
+      </div>
+      <div class="addresses">
+        <div class="address">
+          <strong>Bill To:</strong>
+          <p id="billing-address"></p>
+        </div>
+        <div class="address">
+          <strong>Ship To:</strong>
+          <p id="shipping-address"></p>
+        </div>
+      </div>
+      <div class="items">
+        <table>
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Quantity</th>
+              <th>Unit Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="items-body"></tbody>
+        </table>
+      </div>
+      <div class="summary">
+        <table>
+          <tr>
+            <th>Subtotal:</th>
+            <td id="subtotal"></td>
+          </tr>
+          <tr>
+            <th>Tax:</th>
+            <td id="tax"></td>
+          </tr>
+          <tr>
+            <th>Total:</th>
+            <td id="total"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
